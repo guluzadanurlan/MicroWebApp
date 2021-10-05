@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>@ViewBag.data</h1>
+
+@model List<Blog>
+
+@{ 
+    foreach(var item in Model){
+        <h3>@item.AuthorId</h3>
+        <h3>@item.Id</h3>
+        <h3>@item.Title</h3>
+        <h3>@item.Text</h3>
+    }
+
+}
