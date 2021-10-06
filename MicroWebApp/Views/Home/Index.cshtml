@@ -5,12 +5,134 @@
 
 @model List<Blog>
 
-@{ 
-    foreach(var item in Model){
-        <h3>@item.AuthorId</h3>
-        <h3>@item.Id</h3>
-        <h3>@item.Title</h3>
-        <h3>@item.Text</h3>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = "_Layout";
+}
+
+@{
+    foreach (var item in Model)
+    {
+
+        <section>
+            <div class="container-fluid flexxx">
+                <div class="row">
+                    <div class="col-11 col-md-9 col-sm-11">
+                        <div class="card w-100 shadow">
+                            <div class="card-body">
+                                <a href="/karpuz.html"> <img src="1.jpeg" class="img-fluid" asp-append-version="true" alt="Responsive image"></a>
+
+                                <br>
+                                <br>
+                                <h5 class="card-title paragraf sec-h5"><span class="sec--h5">@item.Title</span></h5>
+                                <p class="card-text paragraf card-ppp">@item.Text</p>
+                                @*<div class="button1">
+                                    <a href="karpuz.html" class="btn btn-primary ">Devamını Oku</a>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-0 col-md-3 d-none d-md-block d-sm-none ">
+                        <h1 class="ensevilen">En Sevilen Yazılar</h1>
+
+                        <a href=""></a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-----------------SECTION-1 BITIR-------------------------->
     }
 
 }
+
+
+
+<br>
+<br>
+
+<section style="max-width: 100%; overflow: hidden;">
+    <div>
+
+        <div class="about">
+            <h1 class="eniyi">En İyi Yazarlarımız</h1>
+            <br>
+            <h3 id="h3" class="vibrate-1"> Ben Nurlan Gulu, 2017 senesinden buyana blog yazarlığı yapıyorum, ve işimi çok seviyorum.</h3>
+            <br />
+            <br />
+
+
+        </div>
+
+    </div>
+
+    <div class="about">
+        <div class="padd">
+            <p> <span id="id1">AKLIMA</span> <span className="paragraf">  - COO, AMERIMAR ENTERPRISES, INC.</span></p>
+        </div>
+    </div>
+    <br>
+    <div class="imgcontainer img22 container">
+        <div class="imgclick row">
+
+            <div><a onclick="aklima()" href="#sec5"><img id="aklima" style=" border-radius: 5px;" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-2.b2f946b1.jpg" alt="" /></a></div>
+            <div><a onclick="fatima()" href="#sec5"><img id="fatima" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-2.b2f946b1.jpg" alt="" /></a></div>
+            <div><a onclick="jannat()" href="#sec5"><img id="jannat" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-3.3926a604.jpg" alt="" /></a></div>
+            <div><a onclick="johns()" href="#sec5"><img id="johns" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-4.5d3ec0a7.jpg" alt="" /></a></div>
+            <div><a onclick="john()" href="#sec5"><img id="john" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-5.70ba829d.jpg" alt="" /></a></div>
+            <div><a onclick="amar()" href="#sec5"><img id="amar" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-6.32f5aaee.jpg" alt="" /></a></div>
+            <div><a onclick="fatimama()" href="#sec5"><img id="fatimama" class="imageclick" src="http://vue.rainbowit.net/img/testimonial-7.8ec70d2b.jpg" alt="" /></a></div>
+
+        </div>
+    </div>
+    <br />
+
+
+
+</section>
+<br>
+<br>
+
+<section>
+
+    <div class="text-center"><h1>Tərəfdaşlarımız</h1></div>
+    <hr style="width: 50%;">
+
+    <div class="responsive container">
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-02.0f998484.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-01.881d99d3.png" alt="">
+            <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-04.f60ed605.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-05.9afbe393.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-06.8e38619b.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-03.3384d0c1.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-02.0f998484.png" alt=""> <br>
+        </div>
+        <div>
+            <img src="http://vue.rainbowit.net/img/brand-04.f60ed605.png" alt=""> <br>
+        </div>
+
+    </div>
+
+</section>

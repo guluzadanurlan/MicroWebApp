@@ -27,6 +27,20 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
 #nullable restore
+#line 5 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using MicroWebApp.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "E:\MicroWebPrj\MicroWebApp\Views\Shared\Error.cshtml"
 using MicroWebApp.Models;
 
@@ -34,7 +48,7 @@ using MicroWebApp.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1cffd9cee9eb2e0a2ccb1d99a7bbf9abb91facc4", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1cfdc17974aafdebbcb2ccb1353e947528a0dbce", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e96bc9fe70382cbefc120527b71adbfe3495d77c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

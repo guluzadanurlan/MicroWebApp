@@ -29,16 +29,17 @@ namespace MicroWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MicroWebIdentityContext>(options=> options.UseSqlServer("Data Source=.;Initial Catalog=MicroWebData;Integrated Security=True"));
-            services.AddIdentity<User,IdentityRole>().AddEntityFrameworkStores<MicroWebIdentityContext>().AddDefaultTokenProviders();
+            services.AddDbContext<MicroWebIdentityContext>(options => options.UseSqlServer("Data Source=.;Initial Catalog=MicroWebData;Integrated Security=True; MultipleActiveResultSets=True;"));
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<MicroWebIdentityContext>().AddDefaultTokenProviders();
 
-            services.Configure<IdentityOptions>(options=> {
+            services.Configure<IdentityOptions>(options =>
+            {
                 // password
                 // options.Password.RequireDigit = true;
                 // options.Password.RequireLowercase = true;
                 // options.Password.RequireUppercase = true;
                 options.Password.RequiredLength = 6;
-                 options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireNonAlphanumeric = true;
 
                 // Lockout                
                 options.Lockout.MaxFailedAccessAttempts = 5;
@@ -51,7 +52,8 @@ namespace MicroWebApp
                 // options.SignIn.RequireConfirmedPhoneNumber = false;
             });
 
-            services.ConfigureApplicationCookie(options=> {
+            services.ConfigureApplicationCookie(options =>
+            {
                 options.LoginPath = "/account/login";
                 options.LogoutPath = "/account/logout";
                 options.AccessDeniedPath = "/account/accessdenied";
@@ -88,6 +90,28 @@ namespace MicroWebApp
 
             app.UseEndpoints(endpoints =>
             {
+
+
+                endpoints.MapControllerRoute(
+                                   name: "adminroles",
+                                   pattern: "admin/role/list",
+                                   defaults: new { controller = "Admin", action = "RoleList" }
+                               );
+
+                endpoints.MapControllerRoute(
+                    name: "adminrolecreate",
+                    pattern: "admin/role/create",
+                    defaults: new { controller = "Admin", action = "RoleCreate" }
+                );
+
+
+                endpoints.MapControllerRoute(
+                    name: "adminroleedit",
+                    pattern: "admin/role/{id?}",
+                    defaults: new { controller = "Admin", action = "RoleEdit" }
+                );
+
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

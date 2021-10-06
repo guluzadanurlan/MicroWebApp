@@ -1,8 +1,10 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MicroWebApp.HelperClass;
 using MicroWebApp.Identity;
 using MicroWebApp.Models;
+using MicroWebApp.Repositories.Entity;
 using Newtonsoft.Json;
 
 namespace MicroWebApp.Controllers
@@ -49,14 +51,13 @@ namespace MicroWebApp.Controllers
             }
             return View();
         }
-
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterModel model)
+        public async Task<IActionResult> Register(RegisterModel model, UploadPhotoModel par)
         {
             if (!ModelState.IsValid)
             {
@@ -72,6 +73,12 @@ namespace MicroWebApp.Controllers
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
+            UnitOfWork unitofwork = new UnitOfWork(new MicroWebDataContext());
+            UsersPhoto dbUserPhoto = new UsersPhoto();
+            dbUserPhoto.UserId = user.Id;
+            dbUserPhoto.PhotoPath = UploadImage.Add(par);
+            unitofwork.UserPhotoRepository.Add(dbUserPhoto);
+            unitofwork.Complete();//UserPhooto data send database
             if (result.Succeeded)
             {
                 // generate token
