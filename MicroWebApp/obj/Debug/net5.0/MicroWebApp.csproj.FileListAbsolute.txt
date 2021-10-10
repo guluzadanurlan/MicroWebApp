@@ -87,3 +87,8 @@ E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Admin\RoleList.cshtml.g.
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Admin\RoleEdit.cshtml.g.cs
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Admin\UserList.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\Profile.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Shared\_ResultMessage.cshtml.g.cs

@@ -20,22 +20,36 @@ using MicroWebApp;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
-using Newtonsoft.Json;
+#line 3 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using MicroWebApp.Models.ControllersModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
 using MicroWebApp.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using MicroWebApp.HelperClass;
 
 #line default
 #line hidden
@@ -48,7 +62,7 @@ using MicroWebApp.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1cffd9cee9eb2e0a2ccb1d99a7bbf9abb91facc4", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e96bc9fe70382cbefc120527b71adbfe3495d77c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"209c94c65f88b4645ccf308cb2d901ff2ea3163d", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

@@ -14,16 +14,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.AspNetCore.Http;
 using MicroWebApp.Models;
+using MicroWebApp.EMailService;
 
 namespace MicroWebApp
 {
     public class Startup
     {
+         private IConfiguration _configuration;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -48,7 +49,7 @@ namespace MicroWebApp
 
                 // options.User.AllowedUserNameCharacters = "";
                 // options.User.RequireUniqueEmail = true;
-                // options.SignIn.RequireConfirmedEmail = false;
+                 options.SignIn.RequireConfirmedEmail = true;
                 // options.SignIn.RequireConfirmedPhoneNumber = false;
             });
 
@@ -62,9 +63,24 @@ namespace MicroWebApp
                 options.Cookie = new CookieBuilder
                 {
                     HttpOnly = true,
-                    Name = ".ShopApp.Security.Cookie"
+                    Name = ".MicroWebApp.Security.Cookie"
                 };
             });
+            services.AddSession(option =>
+            {
+             //minute 30
+                option.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+            //Mail send service
+             services.AddScoped<IEmailSender,SmtpEmailSender>(i=> 
+                new SmtpEmailSender(
+                    _configuration["EmailSender:Host"],
+                    _configuration.GetValue<int>("EmailSender:Port"),
+                    _configuration.GetValue<bool>("EmailSender:EnableSSL"),
+                    _configuration["EmailSender:UserName"],
+                    _configuration["EmailSender:Password"])
+                );
+
             services.AddControllersWithViews();
         }
 
@@ -81,9 +97,10 @@ namespace MicroWebApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCookiePolicy();
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -97,6 +114,12 @@ namespace MicroWebApp
                                    pattern: "admin/role/list",
                                    defaults: new { controller = "Admin", action = "RoleList" }
                                );
+
+                endpoints.MapControllerRoute(
+                  name: "userlist",
+                  pattern: "admin/user/list",
+                  defaults: new { controller = "Admin", action = "UserList" }
+              );
 
                 endpoints.MapControllerRoute(
                     name: "adminrolecreate",

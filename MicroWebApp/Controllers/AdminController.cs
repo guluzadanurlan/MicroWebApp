@@ -5,12 +5,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MicroWebApp.Identity;
 using MicroWebApp.Models;
+using MicroWebApp.Repositories.Entity;
 
 namespace MicroWebApp.Controllers
 {
 
-   
-    [Authorize(Roles ="Admin")]
+
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
 
@@ -34,10 +35,10 @@ namespace MicroWebApp.Controllers
 
             foreach (var user in _userManager.Users)
             {
-                var list = await _userManager.IsInRoleAsync(user,role.Name)? members : nonmembers;
-               
+                var list = await _userManager.IsInRoleAsync(user, role.Name) ? members : nonmembers;
+
                 list.Add(user);
-               
+
             }
             var model = new RoleDetails()
             {
@@ -116,8 +117,11 @@ namespace MicroWebApp.Controllers
             }
             return View(model);
         }
+        public IActionResult UserList()
+        {
 
-
+            return View(_userManager.Users);
+        }
 
     }
 }

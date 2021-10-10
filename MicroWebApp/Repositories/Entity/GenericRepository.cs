@@ -38,7 +38,7 @@ namespace MicroWebApp.Repositories.Entity
             
         }
 
-        public entityT GetFindId(int Id)
+        public entityT GetFindId(object Id)
         {
             return _context.Set<entityT>().Find(Id);
         }

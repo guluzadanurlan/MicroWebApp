@@ -17,7 +17,7 @@ namespace MicroWebApp.Repositories.Abstract
         public void Delete(entityT par);
 
 
-        public entityT GetFindId(int Id);
+        public entityT GetFindId(object Id);
 
         public List<entityT> GetJoinData(string par);
     }

@@ -1,0 +1,194 @@
+@{Layout=null;}
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+
+
+    <section class="my-profile">
+        <br>
+        <br>
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-12  col-lg-3 ">
+
+                    <div class="profile-container">
+                        <div class="offset-1" style="display: flex;
+                     flex-direction: column;
+                     justify-content: center; align-items:  center;">
+                            <div class="circle-image">
+                                <img class="profile-img" src="@ViewBag.Path" asp-append-version="true" alt="300x300" />
+
+                            </div>
+                            <br>
+                            <div>
+                                <h6>@Model.FirstName  @Model.LastName</h6>
+                            </div>
+                            <p class="text-center">Lorem ipsum dolor Voluptate ipsam recusandae reprehenderit veritatis.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="container">
+
+                        <form class="well form-horizontal own-info" action=" " method="post" id="contact_form">
+                            <br>
+                            <br>
+                            <fieldset class="offset-1">
+
+                                <!-- Form Name -->
+                                <legend>Şəxsi məlumatlar</legend>
+
+                                <!-- Text input-->
+
+                                <div class="form-group ofs">
+                                    <label class="col-md-4 control-label">Adınız</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input value="@Model.FirstName" name="first_name" placeholder="Adınız" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Soyadınız</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input value="@Model.LastName" name="last_name" placeholder="Soyadınız" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">E-Mail</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <input value="k" name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Telefon nömrəniz</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                            <input value="@Model.PhoneNumber" name="phone" placeholder="Telefon nömrəniz" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Doğum tarixiniz</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input value="@Model.Password" placeholder="@Model.Password" class="form-control" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Şifrəniz</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input placeholder="Şifrəniz" class="form-control" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Təkrar Şifrəniz</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input placeholder="Təkrar Şifrəniz" class="form-control" type="password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- radio checks -->
+
+                                @* <div class="form-group">
+                                    <label class="col-md-4 control-label">Cinsiniz</label>
+                                    <div class="col-md-4">
+                                        @{ if (Model.Gender == true)
+                                            {
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="gender" value="1" checked /> Kişi
+                                                    </label>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="gender" value="0" /> Qadın
+                                                    </label>
+                                                </div>
+                                            } }
+                                    </div>
+                                </div> *@
+
+                                <button href="/Login/LogOut" type="button" class="btn btn-danger">Hesabdan cıx</button>
+
+
+                                <!-- Text area -->
+                                <!-- Success message -->
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-4">
+                                        <button style="background-color: RGB(155, 35, 53); color: white; font-weight: bold;" type="submit" class="btn btn">Göndər <span class="glyphicon glyphicon-send"></span></button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div><!-- /.container -->
+            </div>
+        </div>
+        </div>
+
+
+
+    </section>
+    <script src="~/js/blogJs.js"></script>
+
+    <script src="https://kit.fontawesome.com/ee1296833e.js" crossorigin="anonymous"></script>
+</body>
+</html>

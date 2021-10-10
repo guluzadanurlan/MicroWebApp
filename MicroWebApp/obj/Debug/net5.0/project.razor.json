@@ -15619,8 +15619,18 @@
   "RootNamespace": "MicroWebApp",
   "Documents": [
     {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Views\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Shared\\_AdminLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminLayout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15641,6 +15651,11 @@
     {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Admin\\RoleEdit.cshtml",
       "TargetPath": "Views\\Admin\\RoleEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Shared\\_ResultMessage.cshtml",
+      "TargetPath": "Views\\Shared\\_ResultMessage.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15681,6 +15696,16 @@
     {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Home\\Contact.cshtml",
       "TargetPath": "Views\\Home\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Admin\\UserList.cshtml",
+      "TargetPath": "Views\\Admin\\UserList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Account\\Profile.cshtml",
+      "TargetPath": "Views\\Account\\Profile.cshtml",
       "FileKind": "mvc"
     }
   ],

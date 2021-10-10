@@ -1,0 +1,13 @@
+@{Layout="_AdminLayout";}
+
+@model IEnumerable<User>
+
+    @{
+        foreach(var item in Model){
+            <p>@item.LastName</p>
+             <p>@item.UserName</p>
+                <p>@item.FirstName</p>
+                <p>----------------------</p>
+
+        }
+    }
