@@ -61,8 +61,36 @@ using MicroWebApp.HelperClass;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Bootstrap4;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Bootstrap4.Core;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6ab0df98f882e5768319480ca33e901970117c90", @"/Views/Admin/RoleList.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"209c94c65f88b4645ccf308cb2d901ff2ea3163d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dd958b107aba867e683305adabf299827fc0f1f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_RoleList : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<IdentityRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("/admin/role/delete"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -161,7 +189,7 @@ WriteAttributeValue("", 957, item.Id, 957, 8, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" class=\"btn btn-primary btn-sm mr-2\">Edit</a>\r\n                                    \r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ab0df98f882e5768319480ca33e901970117c907344", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ab0df98f882e5768319480ca33e901970117c908003", async() => {
                 WriteLiteral("\r\n                                        <input type=\"hidden\" name=\"RoleId\"");
                 BeginWriteAttribute("value", " value=\"", 1236, "\"", 1252, 1);
 #nullable restore

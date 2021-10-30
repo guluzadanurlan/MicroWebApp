@@ -61,8 +61,36 @@ using MicroWebApp.HelperClass;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Bootstrap4;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "E:\MicroWebPrj\MicroWebApp\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Bootstrap4.Core;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4444aa68845bf048d8db9d1d24da8769b056ee1e", @"/Views/Home/Contact.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"209c94c65f88b4645ccf308cb2d901ff2ea3163d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dd958b107aba867e683305adabf299827fc0f1f2", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Contact : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -1,0 +1,11 @@
+
+@model IEnumerable<BlogsModelsWithPhoto>
+
+    @{
+        foreach(var item in Model){
+          
+                <p>@item.PhotoPath</p>
+                <p>@item.Title</p>
+                
+        }
+    }

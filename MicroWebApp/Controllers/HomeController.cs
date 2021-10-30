@@ -4,9 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MicroWebApp.Models;
+using MicroWebApp.Models.ControllersModels;
 using MicroWebApp.Repositories.Entity;
+using X.PagedList;
+using X.PagedList.Mvc.Core;
 
 namespace MicroWebApp.Controllers
 {
@@ -19,15 +23,28 @@ namespace MicroWebApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            UnitOfWork unit=new UnitOfWork(new MicroWebDataContext());
-            var data=unit.BlogRepository.GetList();
-            ViewBag.Data="Nurlan";
-            return View(data);
+            UnitOfWork unit = new UnitOfWork(new microwebappDbContext());
+            var BlogAndAuthor= unit.BlogRepository.GetJoinData("Author");//blog an author
+            microwebappDbContext db=new microwebappDbContext();
+
+            var BlogInfo=(from blog in BlogAndAuthor
+            join photo in db.BlogsPhotos on blog.Id equals photo.BlogId
+            select new BlogsModelsWithPhoto(){
+                Author=blog.Author.FirstName,
+                Title=blog.Title,
+                Text=blog.Text,
+                PhotoPath=photo.PhotoPath,
+                CreateDate=Convert.ToDateTime(blog.CreateDate),
+                FirstName= blog.Author.FirstName
+            }).ToList().ToPagedList(page,2);
+            //
+
+            return View(BlogInfo);
         }
 
-       public IActionResult About()
+        public IActionResult About()
         {
             return View();
         }
@@ -36,7 +53,7 @@ namespace MicroWebApp.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Privacy()
         {
             return View();

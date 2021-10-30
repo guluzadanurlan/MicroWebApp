@@ -6,7 +6,7 @@ namespace MicroWebApp.Repositories.Entity
     
         public class ComentRepository:GenericRepository<Coment>, IComentRepository
     {
-         public ComentRepository (MicroWebDataContext context):base(context)
+         public ComentRepository (microwebappDbContext context):base(context)
         {
             
         }

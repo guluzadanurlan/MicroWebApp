@@ -2,7 +2,7 @@ namespace MicroWebApp.Repositories.Abstract
 {
     public interface IUnitOfWork
     {
-        public IUserRepository UserRepository { get; }
+        public IAspNetUserRepository AspNetUserRepository { get; }
 
         public IUsersPhotoRepository UserPhotoRepository { get; }
         public IBlogRepository BlogRepository { get; }

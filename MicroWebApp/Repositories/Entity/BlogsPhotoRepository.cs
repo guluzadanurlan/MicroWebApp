@@ -5,7 +5,7 @@ namespace MicroWebApp.Repositories.Entity
 {
    public class BlogsPhotoRepository:GenericRepository<BlogsPhoto>, IBlogsPhotoRepository
     {
-         public BlogsPhotoRepository (MicroWebDataContext context):base(context)
+         public BlogsPhotoRepository (microwebappDbContext context):base(context)
         {
             
         }

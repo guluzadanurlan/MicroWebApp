@@ -15639,6 +15639,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\BlogPost\\BlogPost.cshtml",
+      "TargetPath": "Views\\BlogPost\\BlogPost.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Home\\About.cshtml",
       "TargetPath": "Views\\Home\\About.cshtml",
       "FileKind": "mvc"
@@ -15664,8 +15669,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Views\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Admin\\RoleCreate.cshtml",
       "TargetPath": "Views\\Admin\\RoleCreate.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Tested\\Index.cshtml",
+      "TargetPath": "Views\\Tested\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15691,6 +15706,16 @@
     {
       "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Views\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\MicroWebPrj\\MicroWebApp\\Views\\Shared\\_RightSection.cshtml",
+      "TargetPath": "Views\\Shared\\_RightSection.cshtml",
       "FileKind": "mvc"
     },
     {

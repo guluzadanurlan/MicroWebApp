@@ -5,7 +5,7 @@ namespace MicroWebApp.Repositories.Entity
 {
     public class CategoryRepository:GenericRepository<Category>, ICategoryRepository
     {
-         public CategoryRepository (MicroWebDataContext context):base(context)
+         public CategoryRepository (microwebappDbContext context):base(context)
         {
             
         }

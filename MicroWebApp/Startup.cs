@@ -20,7 +20,7 @@ namespace MicroWebApp
 {
     public class Startup
     {
-         private IConfiguration _configuration;
+        private IConfiguration _configuration;
         public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -30,7 +30,9 @@ namespace MicroWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MicroWebIdentityContext>(options => options.UseSqlServer("Data Source=.;Initial Catalog=MicroWebData;Integrated Security=True; MultipleActiveResultSets=True;"));
+            //services.AddDbContext<MicroWebDataContext>(options => options.UseSqlServer(_configuration.GetConnectionString("MsSqlConnection")));
+            services.AddDbContext<MicroWebIdentityContext>(options => options.UseSqlServer(_configuration.GetConnectionString("MsSqlConnection")));
+
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<MicroWebIdentityContext>().AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
@@ -49,7 +51,7 @@ namespace MicroWebApp
 
                 // options.User.AllowedUserNameCharacters = "";
                 // options.User.RequireUniqueEmail = true;
-                 options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = true;
                 // options.SignIn.RequireConfirmedPhoneNumber = false;
             });
 
@@ -68,18 +70,18 @@ namespace MicroWebApp
             });
             services.AddSession(option =>
             {
-             //minute 30
+                //minute 30
                 option.IdleTimeout = TimeSpan.FromMinutes(30);
             });
             //Mail send service
-             services.AddScoped<IEmailSender,SmtpEmailSender>(i=> 
+            services.AddScoped<IEmailSender, SmtpEmailSender>(i =>
                 new SmtpEmailSender(
                     _configuration["EmailSender:Host"],
                     _configuration.GetValue<int>("EmailSender:Port"),
                     _configuration.GetValue<bool>("EmailSender:EnableSSL"),
                     _configuration["EmailSender:UserName"],
                     _configuration["EmailSender:Password"])
-                );
+               );
 
             services.AddControllersWithViews();
         }

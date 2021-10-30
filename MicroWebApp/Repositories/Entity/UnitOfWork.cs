@@ -5,19 +5,19 @@ namespace MicroWebApp.Repositories.Entity
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private MicroWebDataContext _dbContext;
+        private microwebappDbContext _dbContext;
        
-        public UnitOfWork(MicroWebDataContext dbContext)
+        public UnitOfWork(microwebappDbContext dbContext)
         {
             _dbContext = dbContext;
-            UserRepository = new UserRepository(_dbContext);
+            AspNetUserRepository = new AspNetUserRepository(_dbContext);
             UserPhotoRepository = new UsersPhotoRepository(_dbContext);
             BlogRepository = new BlogRepository(_dbContext);
             BlogPhotoRepository = new BlogsPhotoRepository(_dbContext);
             CategoryRepository = new CategoryRepository(_dbContext);
         }
 
-        public IUserRepository UserRepository { get; private set; }
+        public IAspNetUserRepository AspNetUserRepository { get; private set; }
 
         public IUsersPhotoRepository UserPhotoRepository { get; private set; }
         public IBlogRepository BlogRepository { get; private set; }

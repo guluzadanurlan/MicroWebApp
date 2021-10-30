@@ -92,3 +92,15 @@ E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.csht
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\Profile.cshtml.g.cs
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
 E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Shared\_ResultMessage.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\package-lock.json
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\package.json
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Account\ResetPassword.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\BlogPost\BlogPost.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\JetBrains.Annotations.dll
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\X.PagedList.dll
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\MicroWebApp.MvcApplicationPartsAssemblyInfo.cs
+E:\MicroWebPrj\MicroWebApp\bin\Debug\net5.0\X.PagedList.Mvc.Bootstrap4.Core.dll
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Shared\_RightSection.cshtml.g.cs
+E:\MicroWebPrj\MicroWebApp\obj\Debug\net5.0\Razor\Views\Tested\Index.cshtml.g.cs

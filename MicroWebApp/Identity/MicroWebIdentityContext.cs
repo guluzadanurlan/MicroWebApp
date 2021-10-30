@@ -9,10 +9,6 @@ namespace MicroWebApp.Models
 {
     public class MicroWebIdentityContext : IdentityDbContext<User>
     {
-        public MicroWebIdentityContext()
-        {
-        }
-
         public MicroWebIdentityContext(DbContextOptions<MicroWebIdentityContext> options)
             : base(options)
         {

@@ -8,14 +8,11 @@ namespace MicroWebApp.Models
 {
     public partial class MicroWebDataContext : DbContext
     {
-        public MicroWebDataContext()
-        {
-        }
 
-        public MicroWebDataContext(DbContextOptions<MicroWebDataContext> options)
-            : base(options)
-        {
-        }
+        // public MicroWebDataContext(DbContextOptions<MicroWebDataContext> options)
+        //     : base(options)
+        // {
+        // }
 
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetRoleClaim> AspNetRoleClaims { get; set; }
@@ -34,8 +31,10 @@ namespace MicroWebApp.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=MicroWebData;Integrated Security=True");
+                // #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                // optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=MicroWebData;Integrated Security=True");
+                optionsBuilder.UseSqlServer("workstation id=microwebappDb.mssql.somee.com;packet size=4096;user id=microwebapp_SQLLogin_1;pwd=bf45onrmim;data source=microwebappDb.mssql.somee.com;persist security info=False;initial catalog=microwebappDb");
+
             }
         }
 

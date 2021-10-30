@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LBgKX60cgRAC5+ZhpUCd5lSbeIKEwhHvNLrDeEyvHjE/gabjjwmnHziKiDDR9FdhXyLx8XcdxSWIw8lFgNT7fQ==",
+  "dgSpecHash": "BPwKf9ILCAkXSOiz5gi7fa3Aiglyb4hXasLq4cj8IJeH9iJFi9aqdH9+wFougdZ62m+SyWCIXyq16xx9Y2VPUg==",
   "success": true,
   "projectFilePath": "E:\\MicroWebPrj\\MicroWebApp\\MicroWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Computer clinic\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Computer clinic\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
     "C:\\Users\\Computer clinic\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.10\\microsoft.aspnetcore.cryptography.internal.5.0.10.nupkg.sha512",
     "C:\\Users\\Computer clinic\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.10\\microsoft.aspnetcore.cryptography.keyderivation.5.0.10.nupkg.sha512",
     "C:\\Users\\Computer clinic\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.10.nupkg.sha512",
@@ -106,7 +107,10 @@
     "C:\\Users\\Computer clinic\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Computer clinic\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Computer clinic\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Computer clinic\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Computer clinic\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Computer clinic\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512",
+    "C:\\Users\\Computer clinic\\.nuget\\packages\\x.pagedlist.mvc.bootstrap4\\8.1.0\\x.pagedlist.mvc.bootstrap4.8.1.0.nupkg.sha512",
+    "C:\\Users\\Computer clinic\\.nuget\\packages\\x.pagedlist.mvc.core\\8.1.0\\x.pagedlist.mvc.core.8.1.0.nupkg.sha512"
   ],
   "logs": []
 }
